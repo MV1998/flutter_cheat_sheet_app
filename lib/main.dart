@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/animated_container.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/opacity.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/wrap_widget.dart';
 import 'flutter_widgets/expanded_widget.dart';
 
@@ -37,6 +38,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return  AnimatedContainerWidget();
+    return  OpacityWidget();
   }
 }
