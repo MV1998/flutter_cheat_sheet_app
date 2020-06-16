@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/fade_transition.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/floating_action.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/future_builder.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/page_view.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/table.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +37,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButtonWidget();
+    return TableWidget();
   }
 }
