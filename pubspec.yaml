@@ -33,6 +33,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   http: ^0.12.1
+  transparent_image: ^1.0.0
+  signature: ^3.1.1
+  path:
+  path_provider: ^1.6.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

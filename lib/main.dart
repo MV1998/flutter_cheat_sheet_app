@@ -1,42 +1,41 @@
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/fade_transition.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/floating_action.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/future_builder.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/page_view.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/fade_in_image.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/stream_builder.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/table.dart';
+import 'package:signature/signature.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final SignatureController _controller = SignatureController(
+    penStrokeWidth: 5,
+    penColor: Colors.red,
+    exportBackgroundColor: Colors.blue,
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(() => print("Value changed"));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Cheat Sheet'),
+      title: 'Widget',
+      home: StreamBuilderWidget(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  final String title;
-
-  MyHomePage({this.title});
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return TableWidget();
-  }
-}
