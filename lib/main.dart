@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/inherited_model_widget.dart';
-import 'package:signature/signature.dart';
+
+import 'flutter_widgets/custom_paint.dart';
+import 'flutter_widgets/hero2.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,23 +14,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final SignatureController _controller = SignatureController(
-    penStrokeWidth: 5,
-    penColor: Colors.red,
-    exportBackgroundColor: Colors.blue,
-  );
-
-  @override
-  void initState() {
-    super.initState();
-    _controller.addListener(() => print("Value changed"));
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: <String, WidgetBuilder>{
+        'hero2': (context) => Hero2Widget(),
+      },
       title: 'Widget',
-      home: InheritedModelWidget(),
+      home: CustomPaintWidget(),
     );
   }
 }
