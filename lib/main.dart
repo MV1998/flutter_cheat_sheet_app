@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/tooltip.dart';
 
 import 'flutter_widgets/custom_paint.dart';
 import 'flutter_widgets/hero2.dart';
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: CustomPaintWidget(),
+      home: TooltipWidget(),
     );
   }
 }

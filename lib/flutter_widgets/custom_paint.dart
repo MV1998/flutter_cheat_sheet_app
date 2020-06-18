@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 class CustomPaintWidget extends StatefulWidget {
+
   @override
   _CustomPaintWidgetState createState() => _CustomPaintWidgetState();
+
 }
 
 class _CustomPaintWidgetState extends State<CustomPaintWidget> {
