@@ -37,6 +37,7 @@ dev_dependencies:
   signature: ^3.1.1
   path:
   path_provider: ^1.6.1
+  url_launcher: ^5.4.11
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

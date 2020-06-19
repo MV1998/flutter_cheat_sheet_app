@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/animated_icon.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/aspect_ratio.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/media_query.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/spacer.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/placeholder.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/reorderable_list.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/rich_text.dart';
 
 import 'flutter_widgets/hero2.dart';
 
@@ -24,7 +23,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: AspectRatioWidget(),
+      home: ReorderableListViewWidget(),
     );
   }
 }
