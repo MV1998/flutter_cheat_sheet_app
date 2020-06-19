@@ -30,6 +30,8 @@ class _BackDropFilterWidgetState extends State<BackDropFilterWidget> {
         ],
       ),
       body: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Stack(
             children: <Widget>[
