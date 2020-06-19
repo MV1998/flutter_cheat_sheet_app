@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/draggable.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/sized_box.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/value_listnable_builder.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/media_query.dart';
 
 import 'flutter_widgets/hero2.dart';
 
@@ -23,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: DraggableWidget(),
+      home: MediaQueryWidget(),
     );
   }
 }
