@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/animated_icon.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/aspect_ratio.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/media_query.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/spacer.dart';
 
 import 'flutter_widgets/hero2.dart';
 
@@ -21,7 +24,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: MediaQueryWidget(),
+      home: AspectRatioWidget(),
     );
   }
 }
