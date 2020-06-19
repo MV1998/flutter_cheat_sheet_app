@@ -6,6 +6,7 @@ class FittedBoxWidget extends StatefulWidget {
 }
 
 class _FittedBoxWidgetState extends State<FittedBoxWidget> {
+
   var _boxFit = BoxFit.contain;
 
   var _heightValue = 400.0;
@@ -123,7 +124,7 @@ class _OptionItem<T> extends StatelessWidget {
         Radio<T>(
             value: value,
             groupValue: groupValue,
-            activeColor: Colors.lightBlue,
+            activeColor: Colors.red,
             onChanged: onChanged),
         GestureDetector(
           onTap: () {
