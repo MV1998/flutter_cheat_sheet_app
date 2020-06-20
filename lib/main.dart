@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/order_details_card_widget.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/placeholder.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/reorderable_list.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/rich_text.dart';
@@ -23,7 +24,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: ReorderableListViewWidget(),
+      home: OrderDetailsCardWidget(),
     );
   }
 }
