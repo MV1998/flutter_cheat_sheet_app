@@ -26,13 +26,13 @@ class _OrderDetailsCardWidgetState extends State<OrderDetailsCardWidget> {
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Divider(
-                thickness: 1,
-                height: 5,
+                thickness: .8,
+                height: 4,
                 color: Colors.grey,
               );
             },
             primary: true,
-            itemCount: 5,
+            itemCount: 10,
             itemBuilder: (context, index) {
               return OrderDetailsCard();
             },
@@ -117,7 +117,7 @@ class OrderDetailsCard extends StatelessWidget {
                   },
                   child: Container(
                     padding:
-                        EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
+                    EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
                     decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.deepOrange,
@@ -137,7 +137,7 @@ class OrderDetailsCard extends StatelessWidget {
                   onTap: () {},
                   child: Container(
                     padding:
-                        EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
+                    EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
                     decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.deepOrange,
@@ -157,7 +157,7 @@ class OrderDetailsCard extends StatelessWidget {
                   onTap: () {},
                   child: Container(
                     padding:
-                        EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
+                    EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
                     decoration: BoxDecoration(
                         color: Colors.red,
                         border: Border.all(
@@ -178,7 +178,7 @@ class OrderDetailsCard extends StatelessWidget {
                   onTap: () {},
                   child: Container(
                     padding:
-                        EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
+                    EdgeInsets.only(top: 8, bottom: 8, left: 5, right: 5),
                     decoration: BoxDecoration(
                         color: Colors.green,
                         border: Border.all(
