@@ -9,9 +9,9 @@ class OrderDetailsCardWidget extends StatefulWidget {
 }
 
 class _OrderDetailsCardWidgetState extends State<OrderDetailsCardWidget> {
+  var itemCount = 10;
   var count = 0;
   Color color = Colors.yellow;
-
   Color callCustomerButtonColor = Colors.deepOrange;
 
   @override
@@ -26,13 +26,13 @@ class _OrderDetailsCardWidgetState extends State<OrderDetailsCardWidget> {
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Divider(
-                thickness: .8,
+                thickness: .3,
                 height: 4,
                 color: Colors.grey,
               );
             },
             primary: true,
-            itemCount: 10,
+            itemCount: itemCount,
             itemBuilder: (context, index) {
               return OrderDetailsCard();
             },
