@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/animated_opacity.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/constrained_box.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/fractionally_sizedbox.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/semantics.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/stack.dart';
 
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: AnimatedOpacityWidget(),
+      home: FractionallySizedBoxWidget(),
     );
   }
 }
