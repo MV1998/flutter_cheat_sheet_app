@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/animated_padding.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/animated_positioned.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/animated_switcher.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/indexed_stack.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/order_details_card_widget.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/placeholder.dart';
 import 'package:fluttercheatsheetapp/flutter_widgets/reorderable_list.dart';
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: OrderDetailsCardWidget(),
+      home: IndexedStackWidget(),
     );
   }
 }
