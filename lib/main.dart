@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/animated_cross_fade.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/draggable_scrollable_sheet.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/image.dart';
+import 'package:fluttercheatsheetapp/flutter_widgets/tab_widget.dart';
 
 import 'flutter_widgets/hero2.dart';
 
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: DraggableScrollableSheetWidget(),
+      home: TabsWidget(),
     );
   }
 }
