@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/image.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/tab_widget.dart';
 
 import 'flutter_widgets/hero2.dart';
+import 'flutter_widgets/shader_mask.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +21,7 @@ class _MyAppState extends State<MyApp> {
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: TabsWidget(),
+      home: ShaderMaskWidget(),
     );
   }
 }
