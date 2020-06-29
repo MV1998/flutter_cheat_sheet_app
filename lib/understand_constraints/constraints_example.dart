@@ -8,7 +8,7 @@ class ExampleWidget extends StatelessWidget {
       appBar: AppBar(
         title: Text('Constraints Understand'),
       ),
-      body: NewCardListView(),
+      body: UpdatedList(),
     );
   }
 }
@@ -840,7 +840,7 @@ class Example24 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(5),
-      padding:  EdgeInsets.all(5),
+      padding: EdgeInsets.all(5),
       decoration: BoxDecoration(
         border: Border.all(),
       ),
@@ -951,6 +951,233 @@ class Example24 extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class Example25 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                Icons.phone_iphone,
+                size: 40,
+                color: Colors.red,
+              ),
+              Container(
+                child: Text('iPhone'),
+              ),
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                Icons.phone_android,
+                size: 40,
+                color: Colors.blue,
+              ),
+              Container(
+                child: Text('Android'),
+              ),
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(
+                Icons.android,
+                size: 40,
+                color: Colors.amber,
+              ),
+              Container(
+                child: Text('Android'),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class Example26 extends StatefulWidget {
+
+  @override
+  _Example26State createState() => _Example26State();
+}
+
+class _Example26State extends State<Example26> {
+  GlobalKey globalKey = GlobalKey();
+  double height;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      RenderBox renderBox = globalKey.currentContext.findRenderObject();
+      final sizeRed = renderBox.size;
+      setState(() {
+        height = sizeRed.height;
+      });
+    });
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+      return Container(
+        key: globalKey,
+        decoration: BoxDecoration(border: Border.all()),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Expanded(
+              flex: 2,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Container(
+                    child: Text(
+                      '(415) 555-0198',
+                      style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    padding: EdgeInsets.all(5),
+                  ),
+                  Container(
+                    child: Text(
+                      'A convenience widget that combines common painting, positioning, and sizing widgets.',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    padding: EdgeInsets.all(5),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Ratings(),
+                      Container(
+                        child: Text('170 reviews'),
+                      ),
+                    ],
+                  ),
+//                  Container(
+//                    child: Row(
+//                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                      children: <Widget>[
+//                        Column(
+//                          children: <Widget>[
+//                            Icon(Icons.android),
+//                            Container(
+//                              child: Text('Prep.'),
+//                            ),
+//                            Container(
+//                              child: Text('22 min'),
+//                            ),
+//                          ],
+//                        ),
+//                        Column(
+//                          children: <Widget>[
+//                            Icon(Icons.android),
+//                            Container(
+//                              child: Text('Clock.'),
+//                            ),
+//                            Container(
+//                              child: Text('1h'),
+//                            ),
+//                          ],
+//                        ),
+//                        Column(
+//                          children: <Widget>[
+//                            Icon(Icons.android),
+//                            Container(
+//                              child: Text('Done.'),
+//                            ),
+//                            Container(
+//                              child: Text('22 min'),
+//                            ),
+//                          ],
+//                        ),
+//                      ],
+//                    ),
+//                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Image.network(
+                'https://bit.ly/3eJjxzY',
+                fit: BoxFit.fitHeight,
+                height: height,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+}
+
+class UpdatedList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+        Example26(),
+      ],
+    );
+  }
+}
+
+
+class Ratings extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+        Icon(
+          Icons.star,
+          color: Colors.yellow,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.yellow,
+        ),
+        Icon(
+          Icons.star,
+          color: Colors.yellow,
+        ),
+        Icon(
+          Icons.star_half,
+          color: Colors.yellow,
+        ),
+      ],
     );
   }
 }
