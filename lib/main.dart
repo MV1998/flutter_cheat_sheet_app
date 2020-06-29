@@ -1,19 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/builder.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/clip_path.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/clipoval.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/divider.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/ignore_pointer.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/notification_listener.dart';
-import 'package:fluttercheatsheetapp/flutter_widgets/padding.dart';
+import 'package:fluttercheatsheetapp/understand_constraints/constraints_example.dart';
 
-import 'flutter_widgets/cupertino_activity.indicator.dart';
 import 'flutter_widgets/hero2.dart';
-import 'flutter_widgets/progress_indicator.dart';
-import 'flutter_widgets/shader_mask.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 
@@ -26,11 +19,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder>{
         'hero2': (context) => Hero2Widget(),
       },
       title: 'Widget',
-      home: PaddingWidget(),
+      home: ExampleWidget(),
     );
   }
 }
